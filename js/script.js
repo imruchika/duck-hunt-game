@@ -1,0 +1,1 @@
+document.getElementById('duck1'), "return";

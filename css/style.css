@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url(../images/target.png), auto;
+  overflow: hidden;
+  background-color: #3cbcfc;
+}
+.background-nature {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/duck_hunt_bgr.png");
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+}
+.success-dog {
+  position: absolute;
+  bottom: 130px;
+  height: 100px;
+  left: 60%;
+  animation: stand-dog 3s forwards;
+}
+
+.walking-dog {
+  position: absolute;
+  bottom: 50px;
+  animation: walking 5s forwards;
+}
+
+/*=============================
+         Animation start
+  =============================*/
+
+/*==========================
+       Walking dog Animation
+    ==========================*/
+@keyframes walking {
+  0% {
+    left: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+  80% {
+    bottom: 50px;
+    transform: rotate(0);
+  }
+  98% {
+    left: 700px;
+    bottom: 200px;
+    transform: rotate(-40deg);
+    z-index: 0;
+  }
+  99% {
+    left: 700px;
+    bottom: 100px;
+    transform: rotate(10deg);
+    z-index: 0;
+  }
+  100% {
+    left: 800px;
+    bottom: 50px;
+    z-index: -5;
+  }
+}
+
+/* ===========================
+         Ducfly Animation
+   ===========================*/
+
+@keyframes duckfly {
+  0% {
+    left: 150%;
+    top: 10%;
+  }
+  25% {
+    left: 80%;
+    top: 50%;
+  }
+  50% {
+    left: 50%;
+    top: 30%;
+  }
+  75% {
+    left: 40%;
+    top: 30%;
+  }
+  100% {
+    left: -50%;
+    top: 10%;
+  }
+}
+
+/* ======================
+     lose dog Animation
+   ======================*/
+@keyframes stand-dog {
+  50% {
+    left: 60%;
+    z-index: -1;
+    bottom: 10%;
+  }
+
+  100% {
+    left: 60%;
+    z-index: -1;
+    bottom: 0;
+  }
+}
+
+/* =============================
+           ANIMATION END
+   ============================= */
+
+input[type="checkbox"] {
+  z-index: -6;
+  visibility: hidden;
+}
+input + label {
+  position: absolute;
+  /* left: -200px; */
+  width: 100px;
+  height: 86px;
+  /* display: block; */
+  /* z-index: 5; */
+  transform: rotateY(180deg);
+  background: url(../images/duck-blue.gif) no-repeat left center;
+}
+
+input:checked + label {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(200px);
+  transform-origin: 60%;
+  z-index: -5;
+}
+.score {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: #dadada;
+  z-index: 2;
+  text-align: center;
+  font-size: 30px;
+}
+.score::after {
+  content: counter(score);
+  display: inline-block;
+}
+.score::before {
+  content: "score : ";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input:checked {
+  counter-increment: score;
+}
+
+.duck:nth-of-type(1) {
+  /* animation: name duration timing-function delay iteration-count direction */
+  /* fill-mode; */
+  animation: duckfly 10s linear 1s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck2:nth-of-type(2) {
+  animation: duckfly 10s linear 2s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+  transform: rotateY(190deg);
+}
+.duck:nth-of-type(3) {
+  animation: duckfly 10s linear 4s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck2:nth-of-type(4) {
+  animation: duckfly 10s linear 6s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+  transform: rotateY(180deg);
+}
+
+.duck:nth-of-type(5) {
+  animation: duckfly 10s linear 8s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck:nth-of-type(6) {
+  animation: duckfly 10s linear 10s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck2:nth-of-type(7) {
+  animation: duckfly 10s linear 12s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
+
+.duck:nth-of-type(8) {
+  animation: duckfly 10s linear 14s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck2:nth-of-type(9) {
+  animation: duckfly 10s linear 16s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
+
+.duck:nth-of-type(10) {
+  animation: duckfly 10s linear 18s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck:nth-of-type(11) {
+  animation: duckfly 10s linear 20s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck2:nth-of-type(12) {
+  animation: duckfly 10s linear 22s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
+.duck:nth-of-type(13) {
+  animation: duckfly 10s linear 24s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck:nth-of-type(14) {
+  animation: duckfly 10s linear 26s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck2:nth-of-type(15) {
+  animation: duckfly 10s linear 28s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
+.duck2:nth-of-type(16) {
+  animation: duckfly 10s linear 22s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
+.duck2:nth-of-type(17) {
+  animation: duckfly 10s linear 22s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
+.duck:nth-of-type(18) {
+  animation: duckfly 10s linear 24s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck:nth-of-type(19) {
+  animation: duckfly 10s linear 24s infinite;
+  cursor: url(../images/target.png), auto;
+}
+.duck2:nth-of-type(20) {
+  animation: duckfly 10s linear 22s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
+.duck2:nth-of-type(21) {
+  animation: duckfly 10s linear 22s infinite;
+  cursor: url(../images/target.png), auto;
+  background: url(../images/duck-black.gif) no-repeat left center;
+
+  transform: rotateY(180deg);
+}
